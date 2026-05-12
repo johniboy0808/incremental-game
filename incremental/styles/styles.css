@@ -1,0 +1,266 @@
+body {
+    display:grid;
+    place-items:center;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    background-color:#252525;
+    user-select: none;
+    background-image: url(../assets/background.webp);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+
+/* Menu Sections _____________________________________________________________*/
+.menu{
+    justify-content: center;
+    
+}
+.menu h1 {
+    color:white;
+    text-shadow: #252525;
+}
+
+
+.menu-section {
+    display: none;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+.button button {
+    margin: 0 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.button button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.main {
+    display:flex;
+    gap:100px;
+    color:#fff;
+}
+
+.left h3{
+    text-align:center;
+    font-size:24px;
+    margin-bottom:10px;
+    
+}
+
+/*Bibi click gain ______________________________________*/
+
+
+.click-popup {
+    position: fixed;           /* Stays at exact screen position */
+    pointer-events: none;      /* Won't block clicks on elements below */
+    color: #00ff00;           /* Green color */
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: floatUp 1s ease-out forwards;
+    z-index: 9999;            /* Above all other elements */
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.2);
+    }
+}
+
+
+.gem-image{
+    transition: all 0.1s ease;
+    width:200px;
+    height:200px;
+}
+.gem-image:hover{
+    opacity: 0.9;
+    cursor:pointer;
+}
+
+.gem-image:active{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+
+
+.mid-section {
+    width:40%;
+    display: table-column;
+    
+    & h4 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    & p{
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+/*Prestige/infinity stats location_______________________________________*/
+
+
+.stats{
+    display:flex;
+    flex-direction: table;
+    gap:10dvw;
+    bottom:10px;
+    outline: 2px solid white;
+}
+
+/* Prestige section___________________________________________________________*/
+
+.prestige{
+    display:flex;
+    outline: 2px solid white;
+    transition: all 0.1s ease;
+
+}
+
+.prestige-icon img {
+    height:100px;
+    width:100px;
+
+}
+
+.prestige:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+.prestige:active{
+    
+    opacity:0.8;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* infinity section ___________________________________________________________*/
+
+.infinity{
+    transition: all 0.1s ease;
+    display:flex;
+    outline: 2px solid white;
+    border-radius: 5px;
+
+
+}
+
+.infinity-icon img {
+    height:100px;
+    width:100px;
+
+}
+
+.infinity:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+.infinity:active{
+    opacity:0.8;
+    transform: scale(1.05);
+}
+
+
+.right{
+    display: table-column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Upgrade 1 Section ________________________________________________________________________________*/
+
+.upgrade1{
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:330px;
+    height:80px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.upgrade1:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+.upgrade1:active{
+    opacity:0.8;
+    transform: scale(1.05);
+}
+
+.upgrade1-img{
+    width: 75px;
+    height:75px;
+}
+.gem-img{
+    width:20px;
+    
+    height:20px;
+}
+
+.cost-info{
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+
+/*Upgrade 2 ________________________________________________________________________________*/
+
+
+.upgrade2{
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:330px;
+    height:80px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.upgrade2:hover{
+    opacity:0.9;
+    cursor:pointer;
+}
+.upgrade2:active{
+    opacity:0.8;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/*Footer _____________________________________________________________*/
+
+footer{
+    color: white;
+    
+
+}

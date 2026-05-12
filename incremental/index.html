@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goyim clicker</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/iran.css">
+</head>
+
+<body>
+  <audio id="bgMusic" autoplay loop>
+    <source src="assets/music/agartha.mp3" type="audio/mpeg">
+  </audio>
+  <header class="menu">
+    <h1>Goyim Clicker</h1>
+    <div class="button">
+      <button onclick="switchMenu('goyim-menu', this)">Goyim</button>
+      <button onclick="switchMenu('iran-menu', this)">Bomb Iran</button>
+      <button onclick="switchMenu('iraq-menu', this)">Bomb Iraq</button>
+      <button onclick="switchMenu('trading-menu', this)">Insider Trading</button>
+      <button onclick="switchMenu('tariffs-menu', this)">Tarrifs on countries</button>
+      <button onclick="switchMenu('settings-menu', this)">Settings</button>
+      <button onclick="switchMenu('info-menu', this)">Info</button>
+    </div>
+  </header>
+
+
+
+
+  <section>
+    <div id="goyim-menu" class="menu-section">
+      <div class="main">
+        <div class="left">
+          <h3>Goyim slops: <span class="gem-cost">1e100</span></h3>
+          <img src="assets/bibi.gif" alt="Gem" class="gem-image" onclick="incrementGem(event)" draggable="false">
+        </div>
+
+        <div class="mid-section">
+          <div class="stats">
+            <div class="prestigestats">
+              <h3>President level: <span class="president-level">0</span></h3>
+              <p><span class="president-bonus">0</span> x to goyim earnings</p>
+            </div>
+            <div class="infinitystats">
+              <h3>Goyims Donated To Israel: <span class="Donation">0</span></h3>
+              <p><span class="infinity-bonusx">0</span> x to goyim earning</p>
+              <p><span class="infinity-bonusI">0</span> x to President level earning</p>
+            </div>
+          </div>
+          <div class="prestige" onclick="Prestige()">
+            <div class="prestige-icon">
+              <img src="assets/goyim/Prestige/agartha271k.gif" alt="" class="prestige-icon-img" draggable="false">
+            </div>
+            <div class="prestige-info">
+              <h4>President</h4>
+              <p>Requirements: <span class="prestige-requirement">1,000,000 Slops</span></p>
+            </div>
+            <div class="prestige-description">
+              <p>Reset your progress for a permanent and climb the politics ladder</p>
+              <p>Every upgrade will be reset. But you will gain a permanent bonus to your goyim earnings.</p>
+            </div>
+          </div>
+
+          <div class="infinity" onclick="infinity()">
+            <div class="infinity-icon">
+              <img src="assets/goyim/Infinity/Jewpolitic.gif" alt="" class="prestige-icon-img" draggable="false">
+            </div>
+            <div>
+              <h4>Donate To Israel</h4>
+
+            </div>
+
+            <p>Donate to Israel to get several benefits</p>
+            <p>Resets Prestige and upgrades but give permanent bonus to your goyim earnings.</p>
+          </div>
+        </div>
+        <div class="right">
+          <!--  1 Goyim clicker upgrade 1 that upgrades goys earned by 1 per click  -->
+          <div class="upgrade1" onclick="buyUpgrade1()">
+            <div class="left-section">
+              <img src="assets/goyim/upgrade1/kosher.jpg" alt="" class="upgrade1-img" draggable="false">
+            </div>
+            <div class="mid-section">
+              <h4>Kosher Meat</h4>
+              <div class="cost-info">
+                <p>cost <span class="upgrade-cost1">10</span> Slops</p>
+                <img src="assets/bibi.gif" alt="" class="gem-img" draggable="false">
+              </div>
+            </div>
+            <div class="right-section">
+              <p>Jew <span class="upgrade1-level">0</span></p>
+            </div>
+          </div>
+          <!--  2 Goyim clicker upgrade 2 that upgrades goys earned by 1 per second  -->
+          <div class="upgrade2" onclick="buyUpgrade2()">
+            <div class="left-section">
+              <img src="assets/goyim/upgrade2/kosherfactory.webp" alt="" class="upgrade1-img" draggable="false">
+            </div>
+            <div class="mid-section">
+              <h4>Kosher factory</h4>
+              <div class="cost-info">
+                <p>cost <span class="upgrade-cost2">20</span> for 1/s Slops</p>
+                <img src="assets/bibi.gif" alt="" class="gem-img" draggable="false">
+              </div>
+            </div>
+            <div class="right-section">
+              <p>Jew <span class="upgrade2-level">0</span></p>
+            </div>
+          </div>
+          <!--  3 concentrastion camp upgrade with 10 kosher meat per second -->
+          <div class="upgrade2" onclick="buyUpgrade3()">
+            <div class="left-section">
+              <img src="assets/goyim/upgrade3/koshermanager.jpg" alt="" class="upgrade1-img" draggable="false">
+            </div>
+            <div class="mid-section">
+              <h4>Kosher Manager</h4>
+              <div class="cost-info">
+                <p>cost <span class="upgrade-cost3">100</span> for 10/s Goy slop</p>
+                <img src="assets/bibi.gif" alt="" class="gem-img" draggable="false">
+              </div>
+            </div>
+            <div class="right-section">
+              <p>Jew <span class="upgrade3-level">0</span></p>
+            </div>
+          </div>
+          <!--  4 concentrastion camp upgrade with 10 kosher meat per second -->
+          <div class="upgrade2" onclick="buyUpgrade4()">
+            <div class="left-section">
+              <img src="assets/goyim/upgrade4/kosherceo.jpg" alt="" class="upgrade1-img" draggable="false">
+            </div>
+            <div class="mid-section">
+              <h4>Kosher factory CEO</h4>
+              <div class="cost-info">
+                <p>cost <span class="upgrade-cost4">1000</span> for 100/s Black Jew Slops</p>
+                <img src="assets/bibi.gif" alt="" class="gem-img" draggable="false">
+              </div>
+            </div>
+            <div class="right-section">
+              <p>Jew <span class="upgrade4-level">0</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="iran-menu" class="menu-section active">
+      <div class="main">
+        <div class="left">
+          <div class="iran">
+            
+            <h2>Missiles: <span id="value">0 </span>🚀🚀🚀🚀</h2>
+
+            <div id="container">
+              <div id="bar"></div>
+            </div>
+
+            <button onclick="speedUp()">Speed Up</button>
+            <video width="640" height="360" autoplay loop muted>
+              <source src="assets/iran/bombiran/iran.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="mid-section">
+          <div class="Totalbombs">
+            <p>Total bombs sent to iran: <span id="bombtotal">0 </span>🚀</p>
+          </div>
+          <div class="stats">
+            <img src="assets/iran/mid/b2bombing.jpg" alt="">
+            <div class="bombiraninfo">
+              <div>
+                <p>Total deaths: <span></span></p>
+              </div>
+              <div>
+                <p>100x</p>
+              </div>
+              <div>
+                <p>100x</p>
+              </div>
+              
+          
+
+
+
+              
+            </div>
+            
+          </div>
+          
+          <div class="bomb-iran" onclick="sendbomb()">
+            <p>Bomb iran with: <span id="value2">0 </span>🚀</p>
+          </div>
+
+        </div>
+        <div class="right">
+          <div class="stats">
+            <p>test----------------------------------------------------------------------------------------------</p>
+          </div>
+          <div class="stats">
+            <p>test----------------------------------------------------------------------------------------------</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="iraq-menu" class="menu-section">
+      <h2>Bomb Iraq - Coming Soon</h2>
+    </div>
+    <div id="trading-menu" class="menu-section">
+      <h2>Insider Trading - Coming Soon</h2>
+    </div>
+    <div id="tariffs-menu" class="menu-section">
+      <h2>Tarrifs - Coming Soon</h2>
+    </div>
+    <div id="settings-menu" class="menu-section">
+      <h2>Settings - Coming Soon</h2>
+
+      <div class="save-load-section">
+        <h3>Save Game</h3>
+        <button onclick="saveGame()" style="padding: 10px 20px; margin: 10px; cursor: pointer;">Generate Save
+          Data</button>
+        <button onclick="getSaveForDatabase()" style="padding: 10px 20px; margin: 10px; cursor: pointer;">Save to
+          Database (Console)</button>
+
+        <p>Copy this data to store your game:</p>
+        <textarea id="save-data" rows="10" cols="60" style="font-family: monospace;"
+          placeholder="Click 'Generate Save Data' to create save..."></textarea>
+
+        <h3>Load Game</h3>
+        <p>Paste save data here to load:</p>
+        <textarea id="load-data" rows="10" cols="60" style="font-family: monospace;"
+          placeholder="Paste save data here..."></textarea>
+        <br>
+        <button onclick="loadGame(document.getElementById('load-data').value)"
+          style="padding: 10px 20px; margin: 10px; cursor: pointer;">Load Save</button>
+      </div>
+    </div>
+    <div id="info-menu" class="menu-section">
+      <h2>Info - Coming Soon</h2>
+    </div>
+  </section>
+
+
+  <footer>Agartha AB</footer>
+  <script src="java/goyim.js"></script>
+  <script src="java/iran.js"></script>
+</body>
+
+</html>
